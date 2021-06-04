@@ -1,0 +1,133 @@
+ {% extends 'base.html' %}
+{% load static %}
+
+ {% block content %}
+
+{% for p in posts %}
+
+ <section class="left-image">
+              <div class="container-fluid">
+                <div class="row">
+                    <div class="article-panel">
+                   <p class="first">Категория: {{ p.cat }}</p>
+                   <p class="last">Дата: {{ p.time_update|date:"d-m-Y H:i:s" }}</p>
+                </div>
+                  <div class="col-md-3">
+                         {% if p.photo %}
+                    <img src="{{ p.photo.url  }}" alt="">
+                      {% endif %}
+                  </div>
+                  <div class="col-md-7">
+                    <div class="right-content">
+                      <h4>{{ p.title }}</h4>
+                      <p> {{ p.content| truncatewords:45 }}</p>
+                      <div class="primary-button">
+                        <a href="{{ p.get_absolute_url }}">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Header -->
+  {% endfor %}
+
+            <!-- Banner -->
+<!--            <section class="main-banner">-->
+<!--              <div class="container-fluid">-->
+<!--                <div class="row">-->
+<!--                  <div class="col-md-12">-->
+<!--                    <div class="banner-content">-->
+<!--                      <div class="row">-->
+<!--                        <div class="col-md-12">-->
+<!--                          <div class="banner-caption">-->
+<!--                            <h4>Hello, this is your <em>Ramayana</em> Theme.</h4>-->
+<!--                            <span>AWESOME HTML5 &amp; CSS3 TEMPLATE</span>-->
+<!--                            <p>Do you know that <strong>Ramayana</strong> is a free to use Bootstrap 4 CSS template by <strong>templatemo</strong>? You can edit and add more pages as you wanted for your personal or corporate websites.</p>-->
+<!--                            <div class="primary-button">-->
+<!--                              <a href="#">Read More</a>-->
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </section>-->
+
+            <!-- Services -->
+
+
+            <!-- Top Image -->
+
+<!--             Left Image-->
+<!--            <section class="   'top-image' ">-->
+<!--              <div class="container-fluid">-->
+<!--                <div class="row">-->
+<!--                  <div class="col-md-12">-->
+<!--                    <img src="{%static cycle 'women/images/left-image.jpg'  %} " alt="">-->
+<!--                    <div class="down-content">-->
+
+<!--                      <h4>{{ p.title }}</h4>-->
+<!--                      <p>{{ p.content| linebreaks|truncatewords:50}}</p>-->
+<!--                      <div class="primary-button">-->
+<!--                        <a href="#">Read More</a>-->
+<!--                      </div>-->
+
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </section>-->
+
+<!--&lt;!&ndash;            &lt;!&ndash; Right Image &ndash;&gt;&ndash;&gt;-->
+<!--            <section class="right-image">-->
+<!--              <div class="container-fluid">-->
+<!--                <div class="row">-->
+<!--                  <div class="col-md-6">-->
+<!--                    <div class="left-content">-->
+<!--                      <h4>Ante Interdum Raclette</h4>-->
+<!--                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>-->
+<!--                      <div class="primary-button">-->
+<!--                        <a href="#">Read More</a>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-md-6">-->
+<!--                    <img src="{% static 'women/images/right-image.jpg' %}" alt="">-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--      </section>-->
+
+
+
+
+<!--   <section class="left-image">-->
+<!--              <div class="container-fluid">-->
+<!--                <div class="article-panel">-->
+<!--                   <p class="first">Категория: {{ p.cat }}</p>-->
+<!--                   <p class="last">Дата: {{ p.time_update|date:"d-m-Y H:i:s" }}</p>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                  <div class="col-md-12 ">-->
+<!--                    <div class="right-content">-->
+<!--                          {% if p.photo %}-->
+<!--                    <img class="right-content-img" src="{{ p.photo.url }}"   alt="">-->
+<!--                    {% endif %}-->
+<!--                      <h4> {{ p.title }}</h4>-->
+<!--                      <p> {{ p.content|truncatewords:50}}</p>-->
+<!--                      <div class="primary-button">-->
+<!--                        <a href="{{  p.get_absolute_url }}">Read More</a>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </section>-->
+
+ {% endblock %}
+
+

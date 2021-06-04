@@ -1,0 +1,12 @@
+
+#header {
+    background-color: rgba(63, 135, 145, 0.952);
+}
+.module h2, .module caption, .inline-group h2 {
+    background-color: rgba(63, 135, 145, 0.952);
+    
+}
+.field-get_html_photo img{
+    border-radius: 10px;
+    min-height: 58px;
+}

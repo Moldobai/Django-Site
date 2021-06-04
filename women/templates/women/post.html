@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<section class="left-image post-section">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="right-content">
+                {% if post.photo %}
+                <img class="right-content-img" src="{{ post.photo.url }}" alt="">
+                {% endif %}
+                <h4 class="post-h4"> {{ post.title }}</h4>
+                <p> {{ post.content}}</p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<!--            <section class="right-image">-->
+<!--              <div class="container-fluid">-->
+<!--                <div class="row">-->
+<!--                  <div class="col-md-7">-->
+<!--                    <div class="left-content">-->
+<!--                      <h4>{{ post.title }} </h4>-->
+<!--                      <p> {{ post.content  }}</p>-->
+<!--                      <div class="primary-button">-->
+<!--                        <a href="#">Read More</a>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-md-4">-->
+<!--                      {% if post.photo %}-->
+<!--                    <img src="{{ post.photo.url }}" alt="">-->
+<!--                      {% endif %}-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--      </section>-->
+
+
+{% endblock %}

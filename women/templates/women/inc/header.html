@@ -1,0 +1,16 @@
+<header id="header">
+
+
+    <nav class="nav">
+         {% if request.user.is_authenticated %}
+         <div class="users">
+            <span>{{ user.username }}</span>
+        </div>
+        {% endif %}
+
+        <div class="logo ">
+        <a href="{% url 'home' %}">Ramayana</a>
+    </div>
+    </nav>
+
+</header>
